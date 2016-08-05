@@ -109,7 +109,7 @@ set ruler
 set makeprg=python\ %
 
 set t_Co=256
-"colorscheme distinguished 
+"colorscheme distinguished
 colorscheme molokai
 "colorscheme LightTwist 
 "colorscheme pychimp 
