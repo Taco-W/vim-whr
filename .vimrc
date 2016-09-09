@@ -13,6 +13,8 @@ Plugin 'The-NERD-Tree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 
+Plugin 'Yggdroot/IndentLine'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -62,6 +64,7 @@ set wildmenu
 
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 autocmd FileType python setlocal ts=2 sts=2 sw=2
+autocmd FileType java setlocal ts=4 sts=4 sw=4
 
 " Leader 
 let mapleader=";"
@@ -113,3 +116,5 @@ set t_Co=256
 colorscheme molokai
 "colorscheme LightTwist 
 "colorscheme pychimp 
+"
+set backspace=indent,eol,start
