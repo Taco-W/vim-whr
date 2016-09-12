@@ -50,9 +50,9 @@ set clipboard=unnamed
 set expandtab
 
 " Tab Setting
-set tabstop=1
-set softtabstop=1
-set shiftwidth=1
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 
 " Normal Configuration
@@ -62,9 +62,8 @@ set ignorecase
 set nocompatible
 set wildmenu
 
-autocmd FileType cpp setlocal ts=2 sts=2 sw=2
-autocmd FileType python setlocal ts=2 sts=2 sw=2
 autocmd FileType java setlocal ts=4 sts=4 sw=4
+autocmd FileType sh setlocal ts=4 sts=4 sw=4
 
 " Leader 
 let mapleader=";"
@@ -118,3 +117,12 @@ colorscheme molokai
 "colorscheme pychimp 
 "
 set backspace=indent,eol,start
+
+
+" Settings of Indent Line
+
+" Set char for indent sign
+let g:indentLine_char = '|'
+
+" Set color for indent char
+let g:indentLine_color_term = 239
