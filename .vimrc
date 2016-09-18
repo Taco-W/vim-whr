@@ -64,6 +64,7 @@ set wildmenu
 
 autocmd FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType sh setlocal ts=4 sts=4 sw=4
+autocmd FileType cpp setlocal ts=4 sts=4 sw=4
 
 " Leader 
 let mapleader=";"
@@ -126,3 +127,24 @@ let g:indentLine_char = '|'
 
 " Set color for indent char
 let g:indentLine_color_term = 239
+
+" Deal with strange behavior of F1-F10
+if !has("gui_running") && $TERM is "ansi"
+    for [key, code] in [["<F1>", "\eOP"],
+                        \["<F2>", "\eOQ"],
+                        \["<F3>", "\eOR"],
+                        \["<F4>", "\eOS"],
+                        \["<F5>", "\e[15~"],
+                        \["<F6>", "\e[17~"],
+                        \["<F7>", "\e[18~"],
+                        \["<F8>", "\e[19~"],
+                        \["<F9>", "\e[20~"],
+                        \["<F10>", "\e[21~"],
+                        \]
+        execute "set" key."=".code
+    endfor
+endif
+
+" Compile command for multiple language
+autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
+autocmd filetype tex nnoremap <F4> :w <bar> exec '!xelatex '.shellescape('%')<CR>
