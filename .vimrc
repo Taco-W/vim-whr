@@ -112,13 +112,14 @@ set ruler
 set makeprg=python\ %
 
 set t_Co=256
+colorscheme lucius
 "colorscheme distinguished
 "colorscheme molokai
 "colorscheme LightTwist 
 "
-"colorscheme pychimp 
+"colorscheme pychimp
 "colorscheme solarized
-"set background=light
+set background=light
 
 set backspace=indent,eol,start
 
