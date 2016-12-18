@@ -64,7 +64,7 @@ set wildmenu
 
 autocmd FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType sh setlocal ts=4 sts=4 sw=4
-autocmd FileType cpp setlocal ts=4 sts=4 sw=4
+autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 
 " Leader 
 let mapleader=";"
@@ -113,10 +113,13 @@ set makeprg=python\ %
 
 set t_Co=256
 "colorscheme distinguished
-colorscheme molokai
+"colorscheme molokai
 "colorscheme LightTwist 
-"colorscheme pychimp 
 "
+"colorscheme pychimp 
+"colorscheme solarized
+"set background=light
+
 set backspace=indent,eol,start
 
 
@@ -148,3 +151,5 @@ endif
 " Compile command for multiple language
 autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype tex nnoremap <F4> :w <bar> exec '!xelatex '.shellescape('%')<CR>
+
+let g:tex_conceal = ""
