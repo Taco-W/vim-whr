@@ -58,7 +58,7 @@ set autoindent
 " Normal Configuration
 set incsearch
 set hlsearch 
-set ignorecase
+" set ignorecase
 set nocompatible
 set wildmenu
 
