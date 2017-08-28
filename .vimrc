@@ -32,18 +32,16 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" Set NERD Tree
-let g:NERDTreeDirArrows=0
-"au VimEnter * NERDTree
-"map <Leader>n <plug>NERDTreeTabsToggle<CR>
-"au VimEnter * NERDTreeTabsToggle
-":let  g:NERDTreeTabsOpen
-:let g:nerdtree_tabs_open_on_console_startup = 1
+" NERDTree Related Settings
+let g:nerdtree_tabs_open_on_console_startup = 1
+let NERDTreeShowHidden=1
 
-" 开启文件类型侦测
+" Settings of Indent Line
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
+
 filetype on
  
-" 根据侦测到的不同类型加载对应的插件
 filetype plugin on
 
 set laststatus=2
@@ -66,6 +64,7 @@ set wildmenu
 autocmd FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType sh setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
+autocmd FileType python setlocal ts=2 sts=2 sw=2
 
 " Leader 
 let mapleader=";"
@@ -90,13 +89,13 @@ nmap <Leader>q :q<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>WQ :wa<CR>:q<CR>
 nmap <Leader>Q :qa!<CR>
-" 依次遍历子窗口
+" Move between windows
 nnoremap nw <C-W><C-W>
 nnoremap <Leader>lw <C-W>l
 nnoremap <Leader>hw <C-W>h
 nnoremap <Leader>kw <C-W>k
 nnoremap <Leader>jw <C-W>j
-" 定义快捷键在结对符之间跳转，助记pair
+
 nmap <Leader>pa %
 
 " mapping for compile option
@@ -113,25 +112,12 @@ set ruler
 set makeprg=python\ %
 
 set t_Co=256
+
+" Collor Scheme Settings
 colorscheme lucius
-"colorscheme distinguished
-"colorscheme molokai
-"colorscheme LightTwist 
-"
-"colorscheme pychimp
-"colorscheme solarized
 set background=light
 
 set backspace=indent,eol,start
-
-
-" Settings of Indent Line
-
-" Set char for indent sign
-let g:indentLine_char = '|'
-
-" Set color for indent char
-let g:indentLine_color_term = 239
 
 " Deal with strange behavior of F1-F10
 if !has("gui_running") && $TERM is "ansi"
