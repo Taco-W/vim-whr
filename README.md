@@ -8,6 +8,7 @@ It applies multiple vim plugins, installed by [Vundle.vim](https://github.com/Vu
 * [nerdtree-git-plugin] (https://github.com/Xuyuanp/nerdtree-git-plugin)
 * [vim-scala] (https://github.com/derekwyatt/vim-scala)
 * [IndentLine] (https://github.com/jistr/vim-nerdtree-tabs)
+* [taglist.vim] (http://vim-taglist.sourceforge.net/)
 
 The script also deals with weird behavior of key F1-F10 keys on OSX, with reference links:
 * [VIM strange behavior] (http://superuser.com/questions/258986/vim-strange-behaviour-f1-10)
