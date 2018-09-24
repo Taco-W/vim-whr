@@ -69,9 +69,9 @@ autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 autocmd FileType python setlocal ts=2 sts=2 sw=2
 
 " taglist Setting
-let g:Tlist_Auto_Open=1
 let g:Tlist_WinWidth=25
 let g:Tlist_Use_Right_Window=1
+autocmd BufWinEnter * TlistOpen
 
 " Leader 
 let mapleader=";"
