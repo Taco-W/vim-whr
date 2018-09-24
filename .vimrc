@@ -15,6 +15,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'derekwyatt/vim-scala'
 
 Plugin 'Yggdroot/IndentLine'
+Plugin 'taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,7 +35,8 @@ filetype plugin indent on    " required
 
 " NERDTree Related Settings
 let g:nerdtree_tabs_open_on_console_startup = 1
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=25
 
 " Settings of Indent Line
 let g:indentLine_char = '|'
@@ -65,6 +67,11 @@ autocmd FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType sh setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 autocmd FileType python setlocal ts=2 sts=2 sw=2
+
+" taglist Setting
+let g:Tlist_Auto_Open=1
+let g:Tlist_WinWidth=25
+let g:Tlist_Use_Right_Window=1
 
 " Leader 
 let mapleader=";"
