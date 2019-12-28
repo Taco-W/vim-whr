@@ -63,6 +63,9 @@ set ignorecase
 set nocompatible
 set wildmenu
 
+" Avoid adding end of line
+set nofixendofline
+
 autocmd FileType java setlocal ts=4 sts=4 sw=4
 autocmd FileType sh setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
