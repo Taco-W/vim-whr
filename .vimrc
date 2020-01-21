@@ -82,6 +82,10 @@ autocmd BufWinEnter * TlistOpen
 " Leader 
 let mapleader=";"
 
+" ctags optimization
+set autochdir
+set tags=tags;
+
 " replace operator. I can paste without copy/cut previous content
 vmap r "_dhp
 
