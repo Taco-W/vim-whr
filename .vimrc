@@ -154,7 +154,8 @@ if !has("gui_running") && $TERM is "ansi"
 endif
 
 " Compile command for multiple language
-autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
+autocmd filetype python nnoremap <F4> :!%:p <CR>
+" autocmd filetype python nnoremap <F4> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype tex nnoremap <F4> :w <bar> exec '!xelatex '.shellescape('%')<CR>
 nnoremap <F3> :grep! "\<<cword>\>" . -r<CR>
 
